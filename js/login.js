@@ -4,11 +4,10 @@ document.getElementById("loginBtn").addEventListener('click', function(event){
             const loginNumber = document.getElementById("loginNumber").value;
             const loginPass = document.getElementById("loginPass").value;
 
-            
 
             if(!isNaN(loginNumber)  && loginNumber.toString().length === 11 && loginPass.toString().length === 4)
             {
-                window.location.href = "../manager.html";
+                window.location.href = "/payoo-mobile-banking/manager.html";
             }
             else
             {
