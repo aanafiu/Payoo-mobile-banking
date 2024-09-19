@@ -7,20 +7,24 @@ document.getElementById("loginBtn").addEventListener('click', function(event){
 
             if(!isNaN(loginNumber)  && loginNumber.toString().length === 11 && loginPass.toString().length === 4)
             {
-                window.location.href = "/manager.html";
+                window.location.href = "manager.html";
             }
             else
             {
-               const loginBox = document.getElementById("loginBox");
-               const p = document.createElement('p');
-               if(isNaN(loginNumber))
+               const p = document.getElementById("warning");
+            //    const loginBox = document.getElementById("loginBox");
+            //    const p = document.createElement('p');
+
+               if(isNaN(loginNumber) || loginNumber.toString().length < 11 || loginNumber === "")
                {
-                p.innerHTML = "Please give 11 digit number";
+                p.innerText = "Please give 11 digit number";
+                p.classList.add("text-center");
                 loginBox.appendChild(p);
                }
-               else if(loginPass.toString().length !== 4)
+               else if(loginPass.toString().length !== 4 || loginPass === "")
                {
-                p.innerHTML = "Wrong Pin";
+                p.innerText = "Wrong Pin";
+                p.classList.add("text-center");
                 loginBox.appendChild(p);
                }
               
