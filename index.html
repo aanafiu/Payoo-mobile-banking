@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+
+    <!-- fav link -->
+     <link rel="shortcut icon" href="./assets/payoo.png" type="image/x-icon">
+
+
+    <!-- Tailwind and Daisy -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style -->
+     <link rel="stylesheet" href="./style.css">
+  
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- <style>
+    .outfit-font
+    {
+        font-family: "Outfit", sans-serif;
+    }
+    </style> -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+               
+            extend: {
+                colors:{
+                    allBG : "#F4F5F7",
+                    btnblue : "#0874F2",
+                    
+                },
+                fontFamily : {
+                    'outfitFont' : ["Outfit","sans-serif"],
+                },
+            },
+            variants: {},
+            plugins: [],
+        }
+    }
+    </script>
+
+</head>
+
+<body class="font-outfitFont">
+
+    <main class="flex justify-center items-center">
+
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+              <div class="artboard artboard-demo phone-3  bg-allBG ">
+
+                <!-- main part -->
+                 <div  class=" w-[90%] h-[150px] flex justify-center items-center relative" style="background-image: url(./assets/login-bg.png);background-repeat: no-repeat; background-size: cover; background-position: top">
+                    <img src="./assets/login-bg-logo.png" alt="" class="absolute bottom-1/4">
+                 </div>
+                    <!-- login -->
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form id="loginBox" class="card-body">
+                            <div class="form-control">
+                                <label class="label font-medium">
+                                <span class="label-text">Mobile Number</span>
+                                </label>
+                                <input id="loginNumber" type="tel" placeholder="Enter Your Number" class="input input-bordered font-light border-0 rounded-xl bg-allBG focus:outline-btnblue " required />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label font-medium">
+                                <span class="label-text">4 Digit Pin</span>
+                                </label>
+                                <input id="loginPass" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered font-light border-0 rounded-xl bg-allBG focus:outline-btnblue " autocomplete="on" />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="loginBtn" class="btn bg-btnblue text-white hover:bg-blue-500 font-semibold text-xl">Login</button>
+                            </div>
+                        </form>
+                      </div>
+
+              </div>
+            </div>
+          </div>
+
+    </main>
+
+
+
+    <script src="./js/login.js">
+
+
+    </script>
+
+
+
+
+    
+
+</body>
+
+</html>
