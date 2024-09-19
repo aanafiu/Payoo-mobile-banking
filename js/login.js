@@ -15,7 +15,7 @@ document.getElementById("loginBtn").addEventListener('click', function(event){
             //    const loginBox = document.getElementById("loginBox");
             //    const p = document.createElement('p');
 
-               if(isNaN(loginNumber) || loginNumber.toString().length < 11 || loginNumber === "")
+               if(isNaN(loginNumber) || loginNumber.toString().length < 11 || loginNumber.toString().length > 11 || loginNumber === "")
                {
                 p.innerText = "Please give 11 digit number";
                 p.classList.add("text-center");
