@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo</title>
 
+    <link rel="shortcut icon" href="./assets/payoo.png" type="image/x-icon">
+
 
     <!-- Tailwind and Daisy -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- style -->
-     <link rel="stylesheet" href="./style.css">
+     <link rel="stylesheet" href="./style/login.css">
   
 
     <!-- font  -->
@@ -77,7 +79,7 @@
 
 
                     <!-- main section -->
-                     <div class="  border-b-2 border-gray-200 p-4">
+                     <div class=" border-b-2 border-gray-200 p-4">
                         <!-- heading -->
                          <div class="border-2 p-2">
                             <h1 class="text-2xl font-extrabold text-black ">&#128293  Welcome to Payooo!</h1>
@@ -87,48 +89,48 @@
                          <!-- Feature Buttons  -->
                           <div class="grid grid-cols-3 place-content-center gap-2 mt-6">
                             <!-- button -->
-                             <button id="addMoney">
-                                <div class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
+                             <button >
+                                <div id="addMoney" class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
                                     <img src="./assets/wallet.png" alt="" class="w-max h-max">
                                     <p class="text-gray-800 text-sm">Add Money</p>
                                 </div>
                              </button>
 
                             <!-- button -->
-                            <button id="cashOutMoney" class="">
-                            <div class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
+                            <button class="">
+                            <div id="cashOutMoney" class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
                                 <img src="./assets/send.png" alt="" class="w-max h-max">
                                 <p class="text-gray-800 text-sm">Cashout</p>
                             </div>
                             </button>
 
                             <!-- button -->
-                            <button id="transferMoney">
-                            <div class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
+                            <button >
+                            <div id="transferMoney" class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
                                 <img src="./assets/money.png" alt="" class="w-max h-max">
                                 <p class="text-gray-800 text-sm">Transfer Money</p>
                             </div>
                             </button>
 
                             <!-- button -->
-                            <button id="getBonus">
-                            <div class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
+                            <button >
+                            <div id="getBonus" class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
                                 <img src="./assets/financial.png" alt="" class="w-max h-max">
                                 <p class="text-gray-800 text-sm">Get Bonus</p>
                             </div>
                             </button>
 
                             <!-- button -->
-                            <button id="payBill" >
-                            <div class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
+                            <button >
+                            <div id="payBill" class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
                                 <img src="./assets/purse.png" alt="" class="w-max h-max">
                                 <p class="text-gray-800 text-sm">Pay Bill</p>
                             </div>
                             </button>
 
                             <!-- button -->
-                            <button id="payBill">
-                            <div class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
+                            <button>
+                            <div id="transaction" class="hover:bg-yellow-300 flex flex-col justify-center items-center gap-1 border-[2px] rounded-xl border-gray-200 py-2">
                                 <img src="./assets/transaction.png" alt="" class="w-max h-max">
                                 <p class="text-gray-800 text-sm">Transactions</p>
                             </div>
@@ -195,18 +197,52 @@
                  </div>
 
 
+                <!-- Cashout money section -->
+                 <div id="cashoutSection" class="hidden w-full p-4 bg-allBG overflow-auto">
+                    <h1 class="font-semibold text-lg text-black">Cash Out</h1>
+                    <form action="" class=" rounded-xl p-2 bg-white">
+
+                        <!-- Account Number -->
+                        <div class="form-control">
+                            <label class="label font-bold">
+                            <span class="label-text text-base ">Agent Number</span>
+                            </label>
+                            <input id="agentNumber" type="text" placeholder="Enter 11 digit agent number" class="input input-bordered font-light border-0 rounded-xl bg-allBG focus:outline-btnblue " required />
+                        </div>
+                        <!-- amount add -->
+                        <div class="form-control">
+                            <label class="label font-bold">
+                            <span class="label-text text-base ">Amount</span>
+                            </label>
+                            <input id="cashoutAmount" type="text" placeholder="Enter amount to withdraw" class="input input-bordered font-light border-0 rounded-xl bg-allBG focus:outline-btnblue " required />
+                        </div>
+
+                        <!-- pin -->
+                        <div class="form-control">
+                            <label class="label font-bold">
+                            <span class="label-text text-base ">4 Digit Pin</span>
+                            </label>
+                            <input id="withdrawPass" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered font-light border-0 rounded-xl bg-allBG focus:outline-btnblue "  />
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="cashoutBtn" class="btn bg-btnblue text-white hover:bg-blue-500 font-semibold text-xl ">Withdraw Money</button>
+                        </div>
+
+                    </form>
+
+
+                 </div>
+
+
                  <!-- Transaction section -->
-                  <div class="w-full p-4 bg-allBG overflow-auto">
+                  <div id="transactionSection" class="w-full p-4 bg-allBG overflow-auto">
                     <h1 class="font-semibold text-lg text-black">Latest Payment</h1>
 
                     <!-- transaction add -->
                     <div id="listOfTransaction" class=" flex flex-col gap-2">
 
-
-
-                        
-
                     </div>
+
                   </div>
 
               
